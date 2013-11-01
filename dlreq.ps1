@@ -42,9 +42,13 @@ while($i -le $num_pages){
 
 }
 
-
-Write-Host "FINISHED! Your last index is $low_bound."
+#writes next download number to file
 $low_bound > $out_file;
 
+#comments for outputting feedback to user
+Write-Host "FINISHED! Your last index is $low_bound."
+Write-Host "Finished writing to file $out_file"
+
+#clean up for more powershell useage (not necessary)
 $i = 0;
 
